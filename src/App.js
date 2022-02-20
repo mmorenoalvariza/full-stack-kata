@@ -1,13 +1,13 @@
 import React from "react";
 import logo from "./icons/logo.svg";
 import "./App.css";
+import Restaurantes from "./components/Restaurantes";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Full Stack Kata</p>
+        <Restaurantes/>
       </header>
     </div>
   );

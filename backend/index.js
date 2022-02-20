@@ -16,8 +16,8 @@ const port = 8090;
 
 app.use(bodyParser.json());
 app.use(cors());
-app.use(randomDelay);
-app.use(randomFailureMiddleware(0.2));
+// app.use(randomDelay);
+// app.use(randomFailureMiddleware(0.2));
 
 const sortAndPaginateMiddleware = (sortAttr) => (req, res) => {
   const page = req.query.p;
@@ -52,7 +52,7 @@ app.get(
     // Replace logo url
     restaurantsDB.forEach(
       (rest) =>
-        (rest.logo = "https://source.unsplash.com/random/?food,restaurant")
+        (rest.logo = "resto.jfif")
     );
     if (search) {
       const filter = restaurantsDB.filter((restaurant) =>
